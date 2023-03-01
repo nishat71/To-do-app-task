@@ -13,7 +13,7 @@ const Todolist = ({ todo, removeTodo, handleChange }) => {
     return (
         <div>
             <input type="checkbox" className='check' checked={todo.done} onChange={() => { handleCheckboxChange() }} />
-            <span style={todo.done ? {textDecoration:"line-through"} : null}>{todo.title}</span>
+            <span style={todo.done ? { textDecoration: "line-through" } : null}>{todo.title}</span>
             <span className='delete' onClick={() => removeTodo(todo.id)}>X</span>
             <hr />
         </div>

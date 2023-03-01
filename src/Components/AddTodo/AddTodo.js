@@ -9,39 +9,26 @@ const AddTodo = ({ addTodo }) => {
         e.preventDefault()
         const newTodo = { id: Math.random(), title: title, done: false }
         // addTodo(newTodo);
-        // setTitle("");
+        setTitle("");
 
         if ((isNaN(title))) {
             alert('It is not a Number,its string');
             addTodo(newTodo);
-            // setTitle('');
-            setTitle({ title: ""})
+            setTitle('');
+            // setTitle({ title: ""})
         }
         else {
             alert('It is a Number, please give a valid string');
-            setTitle({ title: ""})
+            // setTitle({ title: ""})
+            setTitle('');
         }
-        // if (! isNaN(AddTodo)) {
-        //     // if (title.length < 2) {
-        //     //     alert('PLease input a valid name')
-        //     // }
-        //     alert("please give a valid string")
-
-        // }
-        // else {
-        //     addTodo(newTodo);
-        //     setTitle(" ");
-        // }
-        // if (title.length < 1) {
-        //     alert('PLease input a valid name')
-        // }
     }
 
 
 
     return (
         <form className='addtodo' onSubmit={handleSubmit}>
-            <input type="text" id='title' name='title' onChange={(e) => { setTitle(e.target.value); console.log(isNaN(+e.target.value)) }} placeholder='Text here...' className='input-field' required />
+            <input type="text" id='title' name='title' value={title} onChange={(e) => { setTitle(e.target.value); console.log(isNaN(+e.target.value)) }} placeholder='Text here...' className='input-field' required />
             <button type='submit' className='submit-btn'>Add Todo</button>
         </form>
     );
