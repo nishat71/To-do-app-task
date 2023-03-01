@@ -3,7 +3,7 @@ import './AddTodo.css'
 
 
 const AddTodo = ({ addTodo }) => {
-    const [title, setTitle] = useState("");
+    const [title, setTitle] = useState({ title: "" });
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -11,15 +11,15 @@ const AddTodo = ({ addTodo }) => {
         // addTodo(newTodo);
         // setTitle("");
 
-        if((isNaN(title))){
+        if ((isNaN(title))) {
             alert('It is not a Number,its string');
             addTodo(newTodo);
-            setTitle("");
+            // setTitle('');
+            setTitle({ title: ""})
         }
-        else{
-            alert('It is a Number');
-            alert("please give a valid string")
-            setTitle("");
+        else {
+            alert('It is a Number, please give a valid string');
+            setTitle({ title: ""})
         }
         // if (! isNaN(AddTodo)) {
         //     // if (title.length < 2) {
@@ -36,12 +36,12 @@ const AddTodo = ({ addTodo }) => {
         //     alert('PLease input a valid name')
         // }
     }
-    
+
 
 
     return (
         <form className='addtodo' onSubmit={handleSubmit}>
-            <input type="text" id='title' name='title' onChange={(e) =>{setTitle(e.target.value);  console.log(isNaN(+e.target.value))}} placeholder='Text here...' className='input-field' required />
+            <input type="text" id='title' name='title' onChange={(e) => { setTitle(e.target.value); console.log(isNaN(+e.target.value)) }} placeholder='Text here...' className='input-field' required />
             <button type='submit' className='submit-btn'>Add Todo</button>
         </form>
     );

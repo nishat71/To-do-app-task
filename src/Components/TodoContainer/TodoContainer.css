@@ -7,3 +7,10 @@
     /* background-color: #444444; */
     /* min-height: 100vh; */
 }
+.alert-text{
+   text-align: center;
+   color:red;
+   font-weight: 700;
+   text-transform: capitalize;
+   font-size: 25px;
+}
