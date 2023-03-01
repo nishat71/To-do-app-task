@@ -16,19 +16,19 @@
 .form-field input{
     flex-basis: 80%;
     border:none;
-    border-radius: 0.6rem;
+    border-radius: 5px;
     padding:10px;
 }
 .form-field textarea{
     flex-basis: 80%;
     resize: none;
     border:none;
-    border-radius: 0.6rem;
+    border-radius: 5px;
     padding:10px;
 }
 .form button{
     border:none;
-    border-radius: 0.6rem;
+    border-radius: 5px;
     cursor: pointer;
     display: block;
     margin: 0 auto;

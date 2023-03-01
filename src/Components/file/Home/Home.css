@@ -9,3 +9,7 @@
 .heading{
     color:#fff;
 }
+.line-through{
+    text-decoration: line-through;
+    color:green;
+}

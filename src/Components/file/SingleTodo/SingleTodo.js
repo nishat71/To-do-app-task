@@ -15,7 +15,7 @@ const SingleTodo = (props) => {
     return (
         <div className='todo'>
             <div>
-                <h1>{title ? title : ''}</h1>
+                <h1>{title}</h1>
                 <p>{desc}</p>
             </div>
             <div className='btn-grp'>
@@ -23,7 +23,7 @@ const SingleTodo = (props) => {
                     <i className='fa fa-check circle fa-2x'></i>
                 </button>
                 <button className='btn' onClick={() => {handleClick(id)}}>
-                    <i className='fa fa-trash fa-2x'></i>
+                    <i className='fa fa-trash fa-2x '></i>
                 </button>
             </div>
         </div>

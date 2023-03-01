@@ -16,6 +16,7 @@ const Home = () => {
         })
     };
 
+
     const handleRemoveTodo = (id) => {
         setTodos((prevTodos) => {
             const filterTodos = prevTodos.filter(todo => todo.id !== id);
@@ -27,13 +28,13 @@ const Home = () => {
     const handleCheckbox = (id) => {
         const newTodoList = todos.map((todo) => {
             if (todo.id === id)
-                return { ...todo, done: !todo.done }
+                return { ...todo, done: !todo.done}
             return todo;
         });
         setTodos(newTodoList);
     }
+    
     console.log(todos);
-
 
 
 
