@@ -29,7 +29,7 @@ const TodoContainer = () => {
 
     return (
         <div className='Todo-Container'>
-            <h1 className="heading">Todo App</h1>
+            {/* <h1 className="heading">Todo App</h1> */}
             {
                 todos.length > 0 ? todos.map(todo => <Todolist todo={todo} removeTodo={handleRemoveTodo} handleChange={handleCheckboxChange}></Todolist>) : <p align="center">No todo left here</p>
             }
